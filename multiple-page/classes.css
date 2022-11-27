@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 60px;
+    background-color:#130f40;
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.active{
+    background-color: red;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+.logo{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: sans-serif;
+  
+}
+.logo span{
+    color: red;
+}
+#bars{
+    color: #fff;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+#click:checked ~ #bars i::before{
+    content: '\f00d';
+}
+/* nav code end */
+/* nav media query */
+@media only screen and (max-width:992px) {
+   
+    #bars{
+        display: block;
+    }
+    #click:checked ~  ul{
+       left: 0%;
+    }
+    nav{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+     nav ul{
+        position: fixed;
+        top: 60px;
+        left: -250px;
+        background-color: black;
+        flex-direction: column;
+        width: 250px;
+        height: 60vh;
+        transition: all .5s ease;
+     }
+     nav ul li{
+        padding: 10px 30px;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+        display: block;
+        transition: .5s ease;
+       
+     }
+     nav ul li:hover{
+        background-color: #eb2f06;
+     }
+     nav ul li a{
+        display: block;
+     }
+    
+     .active{
+        background: none;
+        padding: 0;
+     }
+
+}
+/* code end */
+section{
+    padding: 100px 0;
+    background-color: #F8EFBA;
+}
+.container-parent{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.class-title{
+    text-align: center;
+}
+.class-title h1{
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+.class-title span{
+    color: red;
+}
+.class-title p{
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: gray;
+}
+.classes-container{
+    display: flex;
+}
+.single-container{
+    width: 100%;
+    
+}
+.img-div img{
+    width: 100%;
+    height: 200px;
+    box-shadow:  -5px -5px   5px grey;
+}
+.single-card{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.single-div{
+    background-color: #fff;
+    padding: 15px 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 5px 3px aqua;
+}
+.single-div p{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #ff793f;
+}
+.single-div i{
+    font-size: 20px;
+    margin-right: 10px;
+    transform: rotate(135deg);
+}
+.vew-all-div{
+    background-color: orangered;
+  
+}
+.vew-all-div p{
+  
+    color: black;
+}
+.second-container{
+    color: #000;
+}
+.second-container h2{
+      text-transform: capitalize;
+      margin: 20px 0;
+}
+.second-container p{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+
+}
+.second-container button{
+    padding: 10px 40px;
+    text-transform: capitalize;
+    background-color: orangered;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width:688px) {
+    .container-parent{
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    }
+    .classes-container{
+        display: block;
+    }
+    .class-title p{
+        margin-left: 10px;
+        margin-right: 10px;
+       
+    }
+    .single-div{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+   
+}
+@media only screen and (min-width:689px) and (max-width:999px) {
+    .container-parent{
+        margin-left: 100px;
+        margin-right: 100px;
+     
+    }
+    .classes-container{
+        display: block;
+    }
+    .class-title p{
+        margin-left: 30px;
+        margin-right: 30px;
+       
+    }
+    
+    .single-div{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

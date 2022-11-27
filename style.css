@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.644),rgba(0, 0, 0, 0.74)),url('img/rsz_cathy-pham-3jan9inapqi-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    
+}
+nav{
+    height: 60px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.active{
+    background-color: red;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+.logo{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: sans-serif;
+  
+}
+.logo span{
+    color: red;
+}
+/* hero area code start here */
+.hero-container{
+ text-align: center;
+    color: #fff;
+    padding-top: 250px;
+   
+}
+.hero-container h4{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.hero-container h1{
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-size: 70px;
+    font-family: sans-serif;
+}
+.hero-container span{
+    color: red;
+}
+.hero-container button{
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color: #eb2f06;
+    color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+#bars{
+    color: #fff;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+#click:checked ~ #bars i::before{
+    content: '\f00d';
+}
+
+@media only screen and (max-width:992px) {
+   
+    #bars{
+        display: block;
+    }
+    #click:checked ~  ul{
+       left: 0%;
+    }
+    nav{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+     nav ul{
+        position: fixed;
+        top: 60px;
+        left: -250px;
+        background-color: black;
+        flex-direction: column;
+        width: 250px;
+        height: 60vh;
+        transition: all .5s ease;
+     }
+     nav ul li{
+        padding: 10px 30px;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+        display: block;
+        transition: .5s ease;
+       
+     }
+     nav ul li:hover{
+        background-color: #eb2f06;
+     }
+     nav ul li a{
+        display: block;
+     }
+    
+     .active{
+        background: none;
+        padding: 0;
+     }
+
+}
+
+@media only screen and (max-width:688px) {
+    /* hero area code start here */
+.hero-container{
+   
+       padding-top: 150px;
+      
+   }
+}
+@media only screen and (min-width:689px) and (max-width:999px) {
+    /* hero area code start here */
+.hero-container{
+   padding-top: 250px;
+      }
+}
